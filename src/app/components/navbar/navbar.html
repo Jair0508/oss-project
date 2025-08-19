@@ -1,0 +1,45 @@
+<header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3 cursor-default">
+        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+          <span class="text-white font-bold text-xl">OSS</span>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold text-black">Sensei Jimmy Moreno</h1>
+          <p class="text-xs text-gray-600">Karate para Todos</p>
+        </div>
+      </div>
+      <!-- Navegación en escritorio -->
+      <nav class="hidden xl:flex space-x-8">
+        <button (click)="scrollTo('history')" class="text-gray-700 hover:text-red-600 transition-colors font-medium cursor-pointer">Historia</button>
+        <button (click)="scrollTo('champions')" class="text-gray-700 hover:text-red-600 transition-colors font-medium cursor-pointer">¡Campeones!</button>
+        <button (click)="scrollTo('master-class')" class="text-gray-700 hover:text-red-600 transition-colors font-medium cursor-pointer">Clase Magistral</button>
+        <button (click)="scrollTo('saturday-training')" class="text-gray-700 hover:text-red-600 transition-colors font-medium cursor-pointer">Saturday Training</button>
+        <button (click)="scrollTo('oss-project')" class="text-gray-700 hover:text-red-600 transition-colors font-medium cursor-pointer">Proyecto OSS</button>
+        <button (click)="scrollTo('courses-events')" class="text-gray-700 hover:text-red-600 transition-colors font-medium cursor-pointer">Cursos y Eventos</button>
+      </nav>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button (click)="toggleMenu()" class="xl:hidden p-2 rounded-md text-gray-700 cursor-pointer hover:text-red-600 hover:bg-gray-100 transition-colors">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  @if(isMenuOpen) {
+  <div class="xl:hidden absolute right-4 mt-2 w-46 bg-white shadow-xl border border-gray-200 rounded-xl animate-slide-down">
+    <nav class="flex flex-col space-y-2 p-2">
+      <button (click)="scrollTo('history')" class="cursor-pointer px-3 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 hover:translate-x-1 transition-all rounded-lg font-medium text-right">Historia</button>
+      <button (click)="scrollTo('champions')" class="cursor-pointer px-3 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 hover:translate-x-1 transition-all rounded-lg font-medium text-right">¡Campeones!</button>
+      <button (click)="scrollTo('master-class')" class="cursor-pointer px-3 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 hover:translate-x-1 transition-all rounded-lg font-medium text-right">Clase Magistral</button>
+      <button (click)="scrollTo('saturday-training')" class="cursor-pointer px-3 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 hover:translate-x-1 transition-all rounded-lg font-medium text-right">Saturday Training</button>
+      <button (click)="scrollTo('oss-project')" class="cursor-pointer px-3 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 hover:translate-x-1 transition-all rounded-lg font-medium text-right">Proyecto OSS</button>
+      <button (click)="scrollTo('courses-events')" class="cursor-pointer px-3 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 hover:translate-x-1 transition-all rounded-lg font-medium text-right">Cursos y Eventos</button>
+    </nav>
+  </div>
+  }
+</header>

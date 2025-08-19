@@ -9,6 +9,10 @@
     "test": "ng test"
   },
   "prettier": {
+    "printWidth": 280,
+    "singleAttributePerLine": false,
+    "htmlWhitespaceSensitivity": "ignore",
+    "proseWrap": "never",
     "overrides": [
       {
         "files": "*.html",
